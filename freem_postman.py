@@ -184,13 +184,8 @@ class window(QtWidgets.QMainWindow):
             self.ui.txt_response.setText('Could not send request')
 
 
-
-
 if __name__ == '__main__':
     current_dir = os.getcwd()
-
-    #при возврате на главную страницу сохранять настройки
-
     try:
         with open(current_dir + '\history.txt') as file:
             file_history = list(file.read().split('\n'))
@@ -209,5 +204,4 @@ if __name__ == '__main__':
     if len(file_settings) == SETT_LIST_FULL:
         application.fill_form_setting(file_settings)
     application.show()
-
     sys.exit(app.exec())
