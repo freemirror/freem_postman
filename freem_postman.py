@@ -186,6 +186,7 @@ class window(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     current_dir = os.getcwd()
+    os.environ['NO_PROXY'] = 'lk:8085'
     try:
         with open(current_dir + '\history.txt') as file:
             file_history = list(file.read().split('\n'))
